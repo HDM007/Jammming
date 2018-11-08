@@ -1,13 +1,17 @@
 import React from 'react';
 import './TrackList.css';
-import Track from '';
+import tracks from './SearchResults/SearchResults.js';
 
-export class TrackList extends React.Component{
+export class TrackList extends SearchResults.Component{
   render () {
+
     return (
       <div className="TrackList">
-    <!-- You will add a map method that renders a set of Track components  -->
-</div>
+      <Track =
+      {this.props.tracks.map(this.props.name)}
+      {}
+        />
+      </div>
     );
   }
 }
