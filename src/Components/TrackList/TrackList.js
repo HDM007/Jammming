@@ -7,10 +7,16 @@ export class TrackList extends SearchResults.Component{
 
     return (
       <div className="TrackList">
-      <Track =
-      {this.props.tracks.map(this.props.name)}
-      {}
-        />
+        {this.props.tracks.map(track => {
+          return (
+            <Track
+            track = {track}
+            key = {track.id}
+            onAdd={this.props.onAdd}
+            onRemove={this.props.onRemove}
+          )
+        })}
+
       </div>
     );
   }

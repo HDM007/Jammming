@@ -1,6 +1,5 @@
 import React from 'react';
 import './SearchBar.css';
-import App from "./App/App.js";
 import TrackList from './TrackList/Tracklist.js';
 
 export class SearchResults extends App.js{
@@ -8,7 +7,10 @@ export class SearchResults extends App.js{
     return (
       <div className="SearchResults">
       <h2>Results</h2>
-      <Tracklist tracks={this.prop.searchResults} />
+      <TrackList
+        tracks={this.props.searchResults}
+        onAdd={this.props.onAdd} 
+      />
       </div>
     );
   }
